@@ -39,13 +39,15 @@ body{
     place-items: center;
     min-height: 100vh;
     font-size: 15px;
-    padding: 20vh 10vw;
+    padding: 12rem 11rem;
     background-color: var(--primary-colour-Very-dark-blue);
 
 }
 
 .grid-main{
-    min-height: 100%;
+    width: 100%;
+    height: 550px;
+
     display: grid;
     grid-template-columns: repeat(2,1fr);
     border-radius: 15px;
@@ -61,7 +63,9 @@ body{
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding: 5rem 5rem 5rem 4rem;
+    padding: 6rem 6rem 6rem 6rem;
+    min-width: 200px;
+
 
 }
 
@@ -69,8 +73,10 @@ body{
 
     color: var(--neutral-colour-white);
     font-weight: 700;
-    font-size: 1.9rem;
+    font-size: 2.6rem;
+    padding-right: 3rem;
     margin-bottom: 2rem;
+  
     
     
 }
@@ -80,10 +86,10 @@ body{
 }
 .col-1-paragrafo{
     color: var(--neutral-colour-slightly-transparent-white-1);
-    line-height: 1.5rem;
-    margin-right: 1rem;
-    margin-bottom: 7rem;
-    font-size: 0.8rem;
+    line-height: 1.6rem;
+    padding-right: 9rem;
+    margin-bottom: 6rem;
+    font-size: 1.05rem;
 }
 
 
@@ -92,24 +98,82 @@ body{
     display: flex;
     flex-direction: row;
     align-items: start;
-    gap: 2rem;
     color: var(--neutral-colour-slightly-transparent-white-2);
-    gap: 2.8rem;
+    gap: 3.5rem;
+    font-size: 1rem;
+    font-family:"Lexend Deca", sans-serif;;
+
 }
 
 .col-1-end-1{
     color: var(--neutral-colour-white) ;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 0.4rem;
+    font-family: "Inter", sans-serif;
     
 }
 
 .col-2 img{
     width: 100%;
     height: 100%;
-  
+
     filter: brightness(50%) grayscale(10%) sepia(100%) saturate(400%) hue-rotate(230deg);
   
 }
 
+@media (max-width: 1500px) {
+
+    body{
+        padding: 13rem 8rem;
+    }
+
+
+    .col-2{
+        height: 550px;
+  
+    }
+    .col-2 img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .col-1-flex{
+        height: 550px;
+        padding: 4rem;
+    }
+    .col-1-titulo{
+
+        font-size: 1.8rem;
+        padding-right: 1rem;
+        margin-bottom: 3vw;
+  
+    }
+    .col-1-paragrafo{
+        line-height: 1rem;
+        padding-right: 4rem;
+        margin-bottom: 10vw;
+        font-size: 0.9rem;
+    }
+
+    .col-1-end-flex{
+        gap: 3vw;
+        font-size: 0.8rem;
+    }
+    .col-1-end-1{
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+
+ 
+}
+@media (max-width: 375px) {
+    .col-1-titulo{
+        color: rgb(38, 143, 46);
+    }
+    .grid-main{
+        grid-template-columns: 1fr;
+    }
+    .grid-main{
+        height: 50vh;
+    }
+}
